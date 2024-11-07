@@ -1,0 +1,139 @@
+body {
+  background-color: #121212; /* Dark background for a futuristic feel */
+  color: #ffffff; /* White text for contrast */
+  font-family: Arial, sans-serif; /* Clean font */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  padding: 10px 20px; /* Padding around nav */
+}
+
+.logo img {
+  height: 50px; /* Logo height */
+}
+
+.navbar {
+  list-style-type: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal layout for nav items */
+}
+
+.navbar li {
+  margin: 0 15px; /* Space out nav items */
+}
+
+.navbar a {
+  color: #00ff00; /* Neon green color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  color: #00cc00; /* Slightly darker green on hover */
+}
+
+.about-container {
+  text-align: center; /* Center text */
+  margin: 40px auto; /* Center container with margin */
+  max-width: 800px; /* Limit width for readability */
+}
+
+.about-container h1 {
+  font-size: 2.5em; /* Larger heading */
+  margin-bottom: 20px; /* Space below heading */
+  color: #00ff00; /* Neon green color */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Shadow effect */
+}
+
+.about-container p {
+  line-height: 1.6; /* Improve readability with line height */
+  margin: 10px 0; /* Space between paragraphs */
+  color: #e0e0e0; /* Light gray text */
+}
+
+.team-section {
+  margin-top: 40px; /* Space above team section */
+}
+
+.team-section h2 {
+  font-size: 5em; /* Heading size for team section */
+  color: #00ff00; /* Neon green */
+  margin-bottom: 20px; /* Space below heading */
+  position: relative; /* Positioning for the underline */
+  display: inline-block; /* Needed for the underline effect */
+}
+
+.team-section h2::after {
+  content: ""; /* Required for pseudo-element */
+  display: block; /* Display the line */
+  height: 4px; /* Thickness of the underline */
+  background: #00cc00; /* Slightly darker green for contrast */
+  width: 100%; /* Full width of the heading */
+  position: absolute; /* Positioning for the underline */
+  left: 0; /* Align to the left */
+  bottom: -10px; /* Position below the heading */
+  transition: transform 0.3s; /* Smooth transition for hover */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right; /* Origin point for the scaling effect */
+}
+
+.team-section h2:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+  transform-origin: bottom left; /* Change the origin to the left */
+}
+
+.team-container {
+  display: flex; /* Flexbox layout for team members */
+  flex-wrap: wrap; /* Wrap if needed */
+  justify-content: center; /* Center team members */
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin: 10px; /* Space between team members */
+  text-align: center; /* Center text */
+  transition: transform 0.3s; /* Animation on hover */
+}
+
+.team-member:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.team-member img {
+  width: 100px; /* Size for team member images */
+  border-radius: 50%; /* Circular images */
+}
+
+.team-member h3 {
+  margin: 10px 0; /* Space above/below names */
+  color: #00ff00; /* Neon green */
+}
+
+.team-member p {
+  color: #e0e0e0; /* Light gray for roles */
+}
+
+.social-media {
+  margin-top: 10px; /* Space above social media icons */
+}
+
+.social-media a {
+  margin: 0 5px; /* Space between icons */
+}
+
+.social-media img {
+  width: 24px; /* Size for social media icons */
+  height: 24px; /* Keep icons uniform */
+  transition: transform 0.3s;
+}
+
+.social-media img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}

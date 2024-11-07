@@ -1,0 +1,133 @@
+body {
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Dark background for contrast */
+  color: #e0e0e0; /* Light text color */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  padding: 10px 20px; /* Padding around nav */
+}
+
+.logo img {
+  height: 50px; /* Logo height */
+}
+
+.navbar {
+  list-style-type: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal layout for nav items */
+}
+
+.navbar li {
+  margin: 0 15px; /* Space out nav items */
+}
+
+.navbar a {
+  color: #00ff00; /* Neon green color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  color: #00cc00; /* Slightly darker green on hover */
+}
+
+.member-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center; /* Center headings */
+}
+
+h1 {
+  font-size: 5em;
+  color: #00ff00; /* Neon green */
+  margin-bottom: 20px;
+}
+
+.members-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the members */
+}
+
+.member-profile {
+  background-color: rgba(0, 255, 0, 0.3); /* Semi-transparent green */
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Neon glow effect */
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.member-profile:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.member-profile img {
+  width: 150px; /* Consistent size for images */
+  height: 150px;
+  border-radius: 10px; /* Rounded corners */
+  object-fit: cover; /* Keep aspect ratio */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-media img {
+  width: 30px; /* Uniform size for icons */
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.social-media img:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #222; /* Dark background for content */
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #00ff2f;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 10px; /* Rounded corners */
+  color: #fff; /* White text */
+}
+
+.close {
+  color: #aaa; /* Light gray */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff; /* Change color on hover */
+  text-decoration: none;
+  cursor: pointer;
+}

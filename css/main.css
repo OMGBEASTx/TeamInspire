@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #ffffff; /* Light text color */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  padding: 10px 20px; /* Padding around nav */
+}
+
+.logo img {
+  height: 50px; /* Logo height */
+}
+
+.navbar {
+  list-style-type: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal layout for nav items */
+}
+
+.navbar li {
+  margin: 0 15px; /* Space out nav items */
+}
+
+.navbar a {
+  color: #00ff00; /* Neon green color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  color: #00cc00; /* Slightly darker green on hover */
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    270deg,
+    rgb(0, 255, 0),
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgb(0, 255, 0)
+  ); /* More subtle gradient */
+  background-size: 300% 300%; /* Allows for movement */
+  animation: gradientMove 15s ease infinite; /* Moving gradient animation */
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80vw; /* Adjust as needed */
+  height: auto;
+  object-fit: contain; /* Maintain aspect ratio */
+  transform: translate(-50%, -50%); /* Center the logo */
+  opacity: 0.8; /* Slightly more visible */
+  pointer-events: none; /* Prevent interactions */
+  z-index: 2; /* In front of gradient and wave */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3; /* Bring content to the front */
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: popIn 0.5s ease forwards; /* Animation for h1 */
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  animation: fadeIn 0.5s ease forwards; /* Animation for paragraph */
+}
+
+.cta-button {
+  background-color: #00ff00;
+  color: #1a1a1a;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.3s, background-color 0.3s;
+  animation: popIn 0.5s ease forwards; /* Animation for button */
+}
+
+.cta-button:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  background-color: #1a1a1a; /* Dark background on hover */
+  color: #00ff00; /* Neon green text on hover */
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
